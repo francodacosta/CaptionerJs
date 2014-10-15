@@ -154,7 +154,7 @@
 
   (function($) {
     $(document).ready(function() {
-      return $(document).find('[data-captioner]').each(function(index, el) {
+      return $(document).find('[role=caption]').each(function(index, el) {
         return $(el).captioner();
       });
     });

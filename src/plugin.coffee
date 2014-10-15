@@ -2,7 +2,7 @@
 
     $(document).ready( ->
         # console.log @.find('[role=labeler]')
-        $(document).find('[data-captioner]').each((index, el)->
+        $(document).find('[role=caption]').each((index, el)->
             $(el).captioner()
         )
     )

@@ -21,7 +21,7 @@ And finally add caption information to your images
 ```html
 <img
     src="./images/chicory.jpg"
-    data-captioner
+    role="caption"
     title="Chicory flower"
     alt="Common chicory, Cichorium intybus, is a somewhat woody, perennial herbaceous plant usually with bright blue flowers, rarely white or pink."
  />
