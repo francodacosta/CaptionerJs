@@ -5,30 +5,17 @@ module.exports = (grunt) ->
         options:
           join: true
         files:
-          'dist/iImage.js':
+          'dist/CaptionerJs.js':
             [
-              'build/*.coffee'
+              'src/*.coffee'
 #             'otherdirectory/*.coffee'
             ]
     watch:
-      files: [ 'build/*.coffee', 'build/css/*.less' ]
+      files: [ 'src/*.coffee', 'src/css/*.less' ]
       tasks:
         [
           'default'
         ]
-
-
-
-    coffee_tests:
-      compileJoined:
-        options:
-          join: true
-        files:
-          './build/test/datasetTestSpec.js':
-            [
-              'build/*.coffee'
-              'tests/*.coffee'
-            ]
 
     jasmine_node:
         options:
@@ -39,17 +26,17 @@ module.exports = (grunt) ->
             specNameMatcher: 'Spec',
             jUnit:
                 report: true,
-                savePath : "./build/test/reports/jasmine/",
+                savePath : "./src/test/reports/jasmine/",
                 useDotNotation: true,
                 consolidate: true
-        all: ['./build/test/']
+        all: ['./src/test/']
 
     less:
       build:
         options:
-            paths: ["build/css"]
+            paths: ["src/css"]
         files:
-                "dist/iImage.css": "build/css/*"
+                "dist/CaptionerJs.css": "src/css/*"
 
 
 
