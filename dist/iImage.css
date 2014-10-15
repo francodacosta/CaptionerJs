@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poiret One'), local('PoiretOne-Regular'), url(http://fonts.gstatic.com/s/poiretone/v4/HrI4ZJpJ3Fh0wa5ofYMK8b3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+
+.CaptionerJs-container {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-family: 'Poiret One';
+  margin: 0;
+  padding: 0;
+}
+.CaptionerJs-container .caption-title {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  padding: 10px 0 0 10px;
+}
+.CaptionerJs-container .caption-description {
+  font-size: 14px;
+  display: block;
+  padding: 0 10px 0px 10px;
+}
+.CaptionerJs-container .caption-title + .caption-description {
+  padding: 0px 10px 10px 10px;
+}
+.CaptionerJs-container figcaption {
+  display: block;
+  width: 100%;
+  line-height: 20px;
+}
+
+.CaptionerJs-container.static,
+.CaptionerJs-container.bottom-animated {
+  color: #cccccc;
+}
+.CaptionerJs-container.static figcaption,
+.CaptionerJs-container.bottom-animated figcaption {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: hand;
+  cursor: pointer;
+}
+.CaptionerJs-container.static figcaption.open,
+.CaptionerJs-container.bottom-animated figcaption.open {
+  bottom: 0;
+  -webkit-transition: 0.6s bottom;
+  -moz-transition: 0.6s bottom;
+  -ms-transition: 0.6s bottom;
+  -o-transition: 0.6s bottom;
+  transition: 0.6s bottom;
+}
+.CaptionerJs-container.static figcaption.open .caption-open,
+.CaptionerJs-container.bottom-animated figcaption.open .caption-open {
+  display: none;
+}
+.CaptionerJs-container.static figcaption.closed,
+.CaptionerJs-container.bottom-animated figcaption.closed {
+  -webkit-transition: 0.6s bottom;
+  -moz-transition: 0.6s bottom;
+  -ms-transition: 0.6s bottom;
+  -o-transition: 0.6s bottom;
+  transition: 0.6s bottom;
+}
+.CaptionerJs-container.static figcaption.closed .caption-close,
+.CaptionerJs-container.bottom-animated figcaption.closed .caption-close {
+  display: none;
+}
+.CaptionerJs-container.static figcaption.closed .caption-open,
+.CaptionerJs-container.bottom-animated figcaption.closed .caption-open {
+  display: block;
+}
+.CaptionerJs-container.static figcaption.closed .caption-title,
+.CaptionerJs-container.bottom-animated figcaption.closed .caption-title {
+  padding-top: 0px;
+}
+.CaptionerJs-container.static figcaption .caption-actions,
+.CaptionerJs-container.bottom-animated figcaption .caption-actions {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+}
+
+.CaptionerJs-container.stacked {
+  color: #cccccc;
+  border: 1px solid #cccccc;
+}
+.CaptionerJs-container.stacked figcaption {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.CaptionerJs-container.static {
+  color: #cccccc;
+}
+.CaptionerJs-container.static figcaption {
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+}

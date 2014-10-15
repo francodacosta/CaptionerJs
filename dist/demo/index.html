@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+        <script src="../iImage.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../iImage.css" />
+    </head>
+
+    <style>
+        .CaptionerJs-container .copy {
+            margin-top: 10px;
+            display: block;
+            font-size: 10px;
+        }
+
+        .CaptionerJs-container .copy a {
+            color: #ccc;
+        }
+    </style>
+    <body>
+        <h1>CaptionerJs</h1>
+        <p>Beautiful and semanticaly correct captions</p>
+        <h1>Why?</h1>
+        <p>CaptionerJs won't bury your image below layers of <em>dis's</em>. CaptionerJs uses semantic markup like <code>figure</code> and <code>figcaption</code> to keep your code clean. You can write valid html and CaptionerJs will pick your <code>title</code> and <code>alt</code> attributes to generate the caption</p>
+        <h1>Demo</h1>
+        <div class="demo item">
+            <h2>A static caption</h2>
+            <img
+                src="./images/chicory.jpg"
+                data-captioner data-captioner-type="static"
+                title="Chicory flower"
+                alt="Common chicory, Cichorium intybus, is a somewhat woody, perennial herbaceous plant usually with bright blue flowers, rarely white or pink."
+                width=600
+             />
+
+        </div>
+
+
+
+        <div class="demo item">
+            <h2>An animated caption</h2>
+            <img
+                src="http://upload.wikimedia.org/wikipedia/commons/9/93/PM08-13_img02_Kloster_Lehnin.jpg"
+                width="600"
+
+                data-captioner
+                data-captioner-type="animated"
+                title="Cloister garden courtyard"
+                alt="Cloister garden courtyard and St. Marien church (rear) of the Kloster Lehnin (Lehnin abbey, a German Brick Gothic era monastery near Brandenburg/Havel, in Landkreis Potsdam-Mittelmark, Brandenburg).<br>
+                <span class=%22copy%22>
+                    &copy; A.Savin [CC-BY-SA-3.0-2.5-2.0-1.0], <a href=%22http://commons.wikimedia.org/wiki/File%3APM08-13_img02_Kloster_Lehnin.jpg%22>via Wikimedia Commons</a>
+                </span>
+                "
+            >
+        </div>
+
+
+
+        <div class="demo item">
+            <h2>The classic caption</h2>
+            <img
+                src="./images/books.jpg"
+                data-captioner
+                data-captioner-type="stacked"
+                alt="A tunnel made of books in the university of Prague"
+                width=600
+               />
+        </div>
+
+    </body>
+</html>

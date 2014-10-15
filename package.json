@@ -1,0 +1,25 @@
+{
+  "name": "iImage",
+  "version": "2.0.0",
+  "description": "Add fancy labels to your images or other dom elements",
+  "author": "Nuno Costa <nuno@francodacosta.com§>",
+  "main": "dist/iImage.js",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/francodacosta/iImage"
+  },
+  "bugs": {
+      "url": "https://github.com/francodacosta/iImage/issues"
+    },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-jasmine-node": "*",
+    "grunt-contrib-less": "*"
+
+  },
+
+  "license": "MIT"
+}

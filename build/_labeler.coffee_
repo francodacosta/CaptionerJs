@@ -1,0 +1,75 @@
+class Labeler
+
+    constructor: (@element, @title, @content, options) ->
+        defaultOptions =
+            labelPosition: 'bottom',
+            closable: true
+            animate :
+                type: 'slide'
+                duration: "slow"
+                onStart: true,
+            template: """
+                <figcaption class="iImage position-%labelPosition iImage-no-close">
+                    <a class="iImage-close">&caron;</a>
+                    <span class="iImage-title">%title</span><span class="iImage-content">%content</span>
+                </figcaption>
+            """
+
+
+        options = options || {}
+        @options =  Helper.merge(defaultOptions, options)
+        @animation = new Animation
+
+    _processTemplate: ->
+        return @options.template
+                       .replace(/%title/g, @title)
+                       .replace(/%content/g, @content)
+                       .replace(/%labelPosition/g, @options.labelPosition)
+
+    _animate: (el, type) ->
+        console.log el, type, @options.animate.duration
+        @animation.animate(el, type, @options.animate.duration)
+
+    _close: (el) ->
+        if @options.animate.type == 'slide'
+            type = 'slideUp'
+        if @options.animate.type == 'fade'
+            type = 'fadeOut'
+
+        el.find('.iImage-close').html('&circ;')
+        @_animate(el, type)
+
+    _open: (el) ->
+        if @options.animate.type == 'slide'
+            type = 'slideDown'
+        if @options.animate.type == 'fade'
+            type = 'fadeIn'
+
+        @_animate(el, type)
+        el.find('.iImage-close').html('&caron;')
+
+    draw: () ->
+        me = @
+        if not @title and not @content
+            console.warn 'jQUery.labeler: no title or content found for element ', @element
+            return
+
+        wrapper  = @element.wrap("<figure class='iImage-container'></figure>").parent()
+        template = $(@_processTemplate())
+
+        if @options.closable is true
+            template.removeClass('iImage-no-close')
+            template.on('click', '.iImage-close', ->
+                me._close(template)
+            )
+
+        template.hide()
+        wrapper.append(template)
+
+        if @options.animate.onStart
+            @_open(template)
+
+
+
+    window.Francodacosta = window.Francodacosta || {}
+    window.Francodacosta.iImage =  Labeler

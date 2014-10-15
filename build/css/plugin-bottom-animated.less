@@ -1,0 +1,56 @@
+@color-bg : rgba(0,0,0, .7);
+@color-fg : #ccc;
+
+@annimation-speed: .6s;
+
+.CaptionerJs-container.static,
+.CaptionerJs-container.bottom-animated{
+    color: @color-fg;
+
+    figcaption {
+        position   : absolute;
+        background : @color-bg;
+        cursor     : hand;
+        cursor     : pointer;
+
+        &.open {
+            bottom     : 0;
+
+            -webkit-transition: @annimation-speed bottom;
+            -moz-transition: @annimation-speed bottom;
+            -ms-transition: @annimation-speed bottom;
+            -o-transition: @annimation-speed bottom;
+            transition: @annimation-speed bottom;
+
+            .caption-open {
+                display : none;
+            }
+        }
+
+        &.closed {
+            .caption-close {
+                display: none;
+            }
+            .caption-open {
+                display : block;
+            }
+
+            .caption-title {
+                padding-top: 0px;
+            }
+
+            -webkit-transition: @annimation-speed bottom;
+            -moz-transition: @annimation-speed bottom;
+            -ms-transition: @annimation-speed bottom;
+            -o-transition: @annimation-speed bottom;
+            transition: @annimation-speed bottom;
+        }
+
+        .caption-actions {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 20px;
+        }
+    }
+}
