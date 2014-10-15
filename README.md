@@ -27,6 +27,10 @@ And finally add caption information to your images
  />
 ```
 
+CaptionerJs will be applied to all elements containing a ```role="caption"```
+
+
+
 Why another caption plugin ?
 -------------------------------------------------------------------------------
 There are lots of caption plugins out there but CaptionerJs was built with code quality in mind.
