@@ -4,8 +4,28 @@ Beautiful and semantically correct captions
 
 Getting Started
 -------------------------------------------------------------------------------
-Jajascript library to show fancy labels for your image or other elements
+Start by making sure jQuery is included in your page
 
+```html
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+```
+
+Then include CaptionerJs in your page
+
+```html
+<script src="/path/to/CaptionerJs.js"></script>
+```
+
+And finally add caption information to your images
+
+```html
+<img
+    src="./images/chicory.jpg"
+    data-captioner
+    title="Chicory flower"
+    alt="Common chicory, Cichorium intybus, is a somewhat woody, perennial herbaceous plant usually with bright blue flowers, rarely white or pink."
+ />
+```
 
 Why another caption plugin ?
 -------------------------------------------------------------------------------
