@@ -54,6 +54,7 @@
         }
       };
       this.options = $.extend({}, defaultOptions, options);
+      console.log('options', this.options);
     }
 
     CaptionerJs.prototype.addCaption = function(title, description) {
@@ -102,6 +103,12 @@
       caption.css({
         bottom: -this.captionHeight
       });
+      console.log('start closed', this.options.options.startClosed);
+      if (this.options.options.startClosed) {
+        console.log('adding class open');
+        caption.addClass('open').removeClass('closed');
+        console.log('cation has class open', caption.hasClass('open'));
+      }
       this.openCloseCaption(caption);
       window.setTimeout(function() {
         caption.show();
@@ -113,7 +120,8 @@
       var me;
       me = this;
       return caption.on('click', function() {
-        if (caption.hasClass('closed') === true) {
+        console.log('has closed class', caption.hasClass('closed'));
+        if (caption.hasClass('closed')) {
           caption.removeClass('closed');
           caption.addClass('open');
           caption.css('bottom', 0);
@@ -163,7 +171,11 @@
       title = decodeURIComponent(title || this.attr('title') || this.attr('data-title') || '');
       description = decodeURIComponent(description || this.attr('alt') || this.attr('data-description') || '');
       options = {
-        type: this.data('captioner-type') || 'stacked'
+        type: this.data('captioner-type') || 'static',
+        cls: this.data('captioner-class') || 'CaptionerJs',
+        options: {
+          startClosed: this.data('captioner-start-closed') || true
+        }
       };
       l = new CaptionerJs(this, options);
       l.addCaption(title, description);

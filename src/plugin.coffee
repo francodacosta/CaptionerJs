@@ -13,7 +13,11 @@
 
 
         options =
-            type: @data('captioner-type') || 'stacked'
+            type: @data('captioner-type') || 'static'
+            cls  :  @data('captioner-class') || 'CaptionerJs'
+            options:
+                startClosed: @data('captioner-start-closed') || true
+
 
         l = new CaptionerJs @, options
         l.addCaption(title, description);

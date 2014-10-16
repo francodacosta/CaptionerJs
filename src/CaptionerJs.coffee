@@ -8,6 +8,8 @@ class CaptionerJs
                 startClosed: true
 
         @options = $.extend({}, defaultOptions, options)
+        console.log 'options', @options
+
 
     addCaption: (title, description) ->
         console.log @el

@@ -18,7 +18,15 @@ class CaptionerPluginBottomAnimated extends AbstractPlugin
         @captionHeight = caption.outerHeight()
         caption.css({bottom: -@captionHeight })
 
+
+        console.log 'start closed', @options.options.startClosed
+        if @options.options.startClosed
+            console.log 'adding class open'
+            caption.addClass('open').removeClass('closed')
+            console.log 'cation has class open', caption.hasClass('open')
+
         @openCloseCaption(caption)
+
         window.setTimeout ->
             caption.show()
             caption.click()
@@ -28,7 +36,8 @@ class CaptionerPluginBottomAnimated extends AbstractPlugin
 
         me = @
         caption.on('click', ->
-            if caption.hasClass('closed') is true
+            console.log 'has closed class', caption.hasClass('closed')
+            if caption.hasClass('closed')
                 caption.removeClass('closed')
                 caption.addClass('open')
                 caption.css('bottom', 0)

@@ -1,10 +1,13 @@
 CaptionerJs
 ==============================================================================
+
 Beautiful and semantically correct captions
 
+
 Getting Started
--------------------------------------------------------------------------------
-Start by making sure jQuery is included in your page
+--------------------------------------------------------------------------------
+
+ Start by making sure jQuery is included in your page
 
 ```html
 <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
@@ -30,13 +33,12 @@ And finally add caption information to your images
 CaptionerJs will be applied to all elements containing a ```role="caption"```
 
 
-
 Why another caption plugin ?
--------------------------------------------------------------------------------
-There are lots of caption plugins out there but CaptionerJs was built with code quality in mind.
+--------------------------------------------------------------------------------
 
-CaptionerJs won't burry your image inside layers of ```div's```, instead it makes use of ```figure``` and
- ```figcaption``` to produce uncluttered and semantically correct HTML.
+There are lots of caption plugins out there but CaptionerJs was propositally built to create clean and uncluttered HTML.
+
+CaptionerJs won't burry your image inside layers of ```div's```, instead it makes use of ```figure``` and ```figcaption``` to produce uncluttered and semantically correct HTML.
 
 You can write valid HTML, CaptionerJs will make use of ```title``` and ```alt```
 attributes to create the caption
