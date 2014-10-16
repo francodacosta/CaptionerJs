@@ -1,3 +1,12 @@
+/*!
+ * CaptionerJs | Beautiful and semantically correct captions
+ * http://francodacosta.com/captionerjs/
+ *
+ * Copyright 2013-2014, Nuno Costa <nuno@francodacosta.com>
+ * Released under the MIT license
+ * https://github.com/francodacosta/CaptionerJs/blob/master/LICENSE
+ *
+ */
 (function() {
   var AbstractPlugin, CaptionerJs, CaptionerPluginBottomAnimated, CaptionerPluginStacked,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
