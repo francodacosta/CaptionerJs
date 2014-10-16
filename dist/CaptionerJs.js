@@ -15,12 +15,13 @@
 
     AbstractPlugin.prototype.wrapElement = function(cls) {
       var wrapper;
-      console.log('@el[0].style.width', this.el.attr('width') || this.el[0].style.width || this.el.width());
-      wrapper = this.el.wrap("<figure class='" + this.options.cls + "-container " + cls + "'></figure>").parent();
+      wrapper = this.el.wrap("<figure class=\"" + this.options.cls + "-container " + cls + "\" itemscope=\"itemscope\" itemtype=\"http://schema.org/Photograph\"></figure>").parent();
       wrapper.width(this.el.attr('width') || this.el[0].style.width || this.el.width());
       this.el.css({
         width: '100%'
       });
+      this.el.attr('itemprop', 'image');
+      this.el.attr('width', '');
       return wrapper;
     };
 
@@ -28,14 +29,14 @@
       if (!title) {
         return '';
       }
-      return "<span class=\"caption-title\">" + title + "</span>";
+      return "<span class=\"caption-title\"  itemprop=\"name\" >" + title + "</span>";
     };
 
     AbstractPlugin.prototype.generateDescriptionHtml = function(description) {
       if (!description) {
         return '';
       }
-      return "<span class=\"caption-description\">" + description + "</span>";
+      return "<span class=\"caption-description\"  itemprop=\"description\" >" + description + "</span>";
     };
 
     return AbstractPlugin;
@@ -105,9 +106,7 @@
       });
       console.log('start closed', this.options.options.startClosed);
       if (this.options.options.startClosed) {
-        console.log('adding class open');
         caption.addClass('open').removeClass('closed');
-        console.log('cation has class open', caption.hasClass('open'));
       }
       this.openCloseCaption(caption);
       window.setTimeout(function() {

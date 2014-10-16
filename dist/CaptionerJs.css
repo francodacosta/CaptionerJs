@@ -100,4 +100,5 @@
 .CaptionerJs-container.static figcaption {
   background: rgba(0, 0, 0, 0.7);
   bottom: 0;
+  cursor: default;
 }

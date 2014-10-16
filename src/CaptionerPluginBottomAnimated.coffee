@@ -21,9 +21,7 @@ class CaptionerPluginBottomAnimated extends AbstractPlugin
 
         console.log 'start closed', @options.options.startClosed
         if @options.options.startClosed
-            console.log 'adding class open'
             caption.addClass('open').removeClass('closed')
-            console.log 'cation has class open', caption.hasClass('open')
 
         @openCloseCaption(caption)
 
