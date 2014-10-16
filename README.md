@@ -73,4 +73,4 @@ __Available Caption types__:
 Examples
 -------------------------------------------------------------------------------
 Point your browser to ```dist/demo/index.html``` to see it in action or visit
-the [CaptionerJs home page](http://francodacosta.com/captionerJs)
+the [CaptionerJs home page](http://francodacosta.com/captionerjs/)
