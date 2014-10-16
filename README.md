@@ -32,6 +32,30 @@ And finally add caption information to your images
 
 CaptionerJs will be applied to all elements containing a ```role="caption"```
 
+Configuration Options
+--------------------------------------------------------------------------------
+CaptionerJs can be configured using markup:
+
+* __data-captioner-type__: the type of caption to show, defaults to ```static```
+* __data-captioner-class__: the css class to add to the container element, defaults to ```CaptionerJs```
+* __data-captioner-start-closed__: when showing an animated caption should it start open or closed, defaults to ```false```
+
+Or JavaScript
+```js
+    $("img").CaptionerJs({
+        type: "...",
+        cls  : "...",
+        options: {
+            startClosed: ...
+        }
+    });
+```
+_If using the javascript option, do not set the_ ```role="caption"``` _attribute on your elements_
+
+__Available Caption types__:
+* __static__, the caption is on the lower end of the image
+* __animated__, the same as static but the caption can be opened or closed
+* __classic__, the caption is shown below the image
 
 Why another caption plugin ?
 --------------------------------------------------------------------------------

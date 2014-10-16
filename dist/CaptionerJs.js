@@ -163,20 +163,22 @@
   (function($) {
     $(document).ready(function() {
       return $(document).find('[role=caption]').each(function(index, el) {
-        return $(el).captioner();
+        return $(el).CaptionerJs();
       });
     });
-    $.fn.captioner = function(title, description) {
-      var l, options;
-      title = decodeURIComponent(title || this.attr('title') || this.attr('data-title') || '');
-      description = decodeURIComponent(description || this.attr('alt') || this.attr('data-description') || '');
-      options = {
+    $.fn.CaptionerJs = function(options) {
+      var defaultOptions, description, l, title;
+      title = decodeURIComponent(this.attr('title') || this.attr('data-title') || '');
+      description = decodeURIComponent(this.attr('alt') || this.attr('data-description') || '');
+      options = options || {};
+      defaultOptions = {
         type: this.data('captioner-type') || 'static',
         cls: this.data('captioner-class') || 'CaptionerJs',
         options: {
-          startClosed: this.data('captioner-start-closed') || true
+          startClosed: this.data('captioner-start-closed') || false
         }
       };
+      options = $.extend({}, defaultOptions, options);
       l = new CaptionerJs(this, options);
       l.addCaption(title, description);
       return this;
