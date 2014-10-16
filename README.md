@@ -3,6 +3,18 @@ CaptionerJs
 
 Beautiful and semantically correct captions
 
+Why another caption plugin ?
+--------------------------------------------------------------------------------
+
+There are lots of caption plugins out there but CaptionerJs was propositally built to create clean and uncluttered HTML.
+
+CaptionerJs won't burry your image inside layers of ```div's```, instead it makes use of ```figure``` and ```figcaption``` to produce uncluttered and semantically correct HTML.
+
+You can write valid HTML, CaptionerJs will make use of ```title``` and ```alt```
+attributes to create the caption
+
+CaptionerJs is plugin based, you can easily add new caption types
+
 
 Getting Started
 --------------------------------------------------------------------------------
@@ -57,17 +69,6 @@ __Available Caption types__:
 * __animated__, the same as static but the caption can be opened or closed
 * __classic__, the caption is shown below the image
 
-Why another caption plugin ?
---------------------------------------------------------------------------------
-
-There are lots of caption plugins out there but CaptionerJs was propositally built to create clean and uncluttered HTML.
-
-CaptionerJs won't burry your image inside layers of ```div's```, instead it makes use of ```figure``` and ```figcaption``` to produce uncluttered and semantically correct HTML.
-
-You can write valid HTML, CaptionerJs will make use of ```title``` and ```alt```
-attributes to create the caption
-
-CaptionerJs is plugin based, you can easily add new caption types
 
 Examples
 -------------------------------------------------------------------------------
