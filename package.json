@@ -1,15 +1,16 @@
 {
-  "name": "iImage",
-  "version": "2.0.0",
-  "description": "Add fancy labels to your images or other dom elements",
-  "author": "Nuno Costa <nuno@francodacosta.com§>",
-  "main": "dist/iImage.js",
+  "name": "CaptionerJs",
+  "version": "1.0.3",
+  "keywords": ["jquery-plugin", "image", "caption", "captons", "image overlay"],
+  "description": "Beautiful and semantically correct Captions for your images",
+  "author": "Nuno Costa <nuno@francodacosta.com>",
+  "main": "dist/Captionerjs.min.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/francodacosta/iImage"
+    "url": "https://github.com/francodacosta/CaptionerJs"
   },
   "bugs": {
-    "url": "https://github.com/francodacosta/iImage/issues"
+    "url": "https://github.com/francodacosta/CaptionerJs/issues"
   },
   "dependencies": {},
   "devDependencies": {
